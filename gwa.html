@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GWA Calculator</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #9155aa;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .box {
+            width: 350px;
+            margin: auto;
+            background-color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gwa.html">GWA Calculator</a>
+        <a href="clubs.html">School Clubs</a>
+    </nav>
+
+    <div class="box">
+        <h3>GWA Calculator</h3>
+
+        <input id="g1" type="number" placeholder="Math">
+        <input id="g2" type="number" placeholder="English">
+        <input id="g3" type="number" placeholder="Science">
+        <input id="g4" type="number" placeholder="Filipino">
+        <input id="g5" type="number" placeholder="ICT">
+
+        <button pys-onClick="compute">Compute GWA</button>
+
+        <p id="output"></p>
+    </div>
+
+    <py-config>
+    </py-config>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
+
+

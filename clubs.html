@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Club Information</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        nav {
+            background-color: #9155aa;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        button, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gwa.html">GWA Calculator</a>
+        <a href="clubs.html">School Clubs</a>
+    </nav>
+
+    <div class="container">
+        <h2>School Club Information</h2>
+
+        <select id="club">
+            <option>Marching Band</option>
+            <option>Glee Club</option>
+            <option>Dance Club</option>
+            <option>Math Club</option>
+            <option>Science Club</option>
+            <option>Communications Arts Club</option>
+            <option>COCC</option>
+            <option>Social Science Club</option>
+            <option>Volleyball Varsity</option>
+            <option>Basketball Varsity</option>
+        </select>
+
+        <button onclick="showInfo()">Show Club Info</button>
+
+        <div id="info"></div>
+    </div>
+
+
+<script>
+function showInfo() {
+    var club = document.getElementById("club").value;
+
+    var details = {
+        "Marching Band": "Moderator: Mr. Emilio Alumno<br>Meeting: Tue & Wed 3:00–4:30 PM<br>Venue: Band Room",
+
+        "Glee Club": "Moderator: Mr. Denver Martin<br>Meeting: Monday 3:00–5:00 PM<br>Venue: Music Room",
+
+        "Dance Club": "Moderator: Mr. Alfred Cases<br>Meeting: Tuesday 3:00–5:00 PM<br>Venue: Teatro Preciosa",
+
+        "Math Club": "Moderator: Mr. Nicole Gabuya<br>Meeting: Monday 2:30–3:00 PM<br>Venue: Room 404",
+
+        "Science Club": "Moderator: Ms. Jameelyn Maramag<br>Meeting: Tuesday 3:00–4:00 PM<br>Venue: Room 404",
+
+        "Communications Arts Club": "Moderator: Ms. Yannis Fernandez<br>Meeting: Wed & Fri 3:00–4:00 PM<br>Venue: Room 406",
+
+        "COCC": "Moderator: SSgt. Jemima David PA (Res)<br>Meeting: Wednesday 2:30–4:30 PM<br>Venue: Quadrangle / Teatro Preciosa",
+
+        "Social Science Club": "Moderator: Mr. Roberto Lim<br>Meeting: Tuesday 3:00–4:00 PM<br>Venue: Room 409",
+
+        "Volleyball Varsity": "Moderator: Mr. Adrian Ruiz<br>Meeting: Wednesday 3:00–4:00 PM<br>Venue: Quadrangle",
+
+        "Basketball Varsity": "Moderator: Mr. Adrian Ruiz<br>Meeting: Monday 3:00–4:00 PM<br>Venue: Quadrangle"
+    };
+
+    document.getElementById("info").innerHTML =
+        "<b>" + club + "</b><br>" + details[club];
+}
+</script>
+
+
+</body>
+</html>
